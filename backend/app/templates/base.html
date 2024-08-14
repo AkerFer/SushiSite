@@ -4,19 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     {%block title%}
+     {% block title %}
      <title>Sushi Website</title>
      {% endblock %}
  
-     {% block css%}{% endblock%}
+     {% block css %}{% endblock %}
 
   </head>
   <body>
+
+    <header>
+    {% include 'navbar.html'%}
+    </header>
+
+
      <div class="base-container">
-         {%block content%}{% endblock %}
+         {% block content %}{% endblock %}
      </div>
    
 
-    {% block js%}{% endblock%}
+    {% block js %}{% endblock %}
   </body>
 </html>
