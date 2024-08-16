@@ -1,0 +1,116 @@
+{% load static %}
+
+<style>
+    .main-wrapper{
+        padding-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    .first-container{
+        padding-left: 100px;
+        padding-bottom: 50px;
+    }
+    .first-container h1{
+        font-size: 60px;
+        color: aliceblue;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .first-container p{
+        font-size: 15px;
+        color: lightgray;
+        font-family: sans-serif;
+    }
+    .first-container .main_menu{
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-family: sans-serif;
+    }
+    .first-container .seasonal_menu{
+        background-color: #333;
+        color: #4CAF50;
+        padding: 8px 18px;
+        border: 3px solid #4CAF50;
+        cursor: pointer;
+        font-family: sans-serif;
+    }
+    .second-container{
+        padding-left: 250px;
+    }
+    .second-container .create-menu{
+        padding: 30px;
+        background-color: #ffffff;
+        width: 60%;
+        height: 80%;
+    }
+    .second-container .create-menu .headers{
+        font-family: sans-serif;
+    }
+    .second-container .create-menu h2{
+        font-size: 15px;
+        color: #4CAF50;
+
+    }
+    .second-container .create-menu .form_inputs{
+        text-align: center;
+        margin: 10px;
+        padding-bottom: 10px;
+    }
+    .second-container .create-menu .form_inputs label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        font-family: sans-serif;
+        text-align: left;
+        padding-top: 20px;
+    }
+    .second-container .create-menu .form_inputs input{
+        width: 80%;
+        padding: 10px 20px;
+        border: 2px solid #4CAF50;
+        font-family: sans-serif;
+        cursor: pointer;
+        padding-top: 10px;
+    }
+    .second-container .create-menu .submit_btn{
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        height: 50%;
+    }
+</style>
+
+
+<div class="main-wrapper">
+    <div class="first-container">
+        <h1>Best place to find your food love</h1>
+        <p>Vel ullamcorper ultrices volutpat enim dignissim id purus. Urna quam massa urna dolor enim dui lectus idristique dignissim pharetra</p>
+        <button class="main_menu">Main menu</button>
+        <button class="seasonal_menu">Seasonal menu</button>
+    </div>
+    <div class="second-container">
+        <div class="create-menu">
+            <div class="headers">
+            <h2>Reservation</h2>
+            <h1>Book a table</h1>
+            </div>
+            <div class="form_inputs">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name">
+                <label for="price">Price</label>
+                <input type="number" id="price" name="price" placeholder="Price">
+                <label for="date">Date</label>
+                <input type="date" id="data" name="data" placeholder="Date">
+            </div>
+            <button class="submit_btn">Submit</button>
+        </div>
+    </div>
+</div>
