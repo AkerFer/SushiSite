@@ -1,0 +1,125 @@
+{% load static %}
+
+<style>
+    .menucard-sushi {
+        height: 100vh;
+        background-color: white;
+        margin: 0;
+    }
+
+    .titles_h1 h1{
+        text-align: center;
+        font-size: 40px;
+        font-family: sans-serif;
+        padding-bottom: 20px;
+    }
+
+    .titles_h3 {
+        text-align: center;
+        margin: 40px 0; 
+    }
+
+    .titles_h3 h3 {
+        display: inline-block; 
+        position: relative;   
+        margin: 0;           
+        padding: 0 10px;
+        font-size: 15px;
+        padding-top: 40px;
+        font-family: sans-serif;  
+        color: green; 
+    }
+
+    .titles_h3 h3::before,
+    .titles_h3 h3::after {
+        content: "";                        
+        display: inline-block;               
+        width: 50px;                           
+        border-bottom: 2px solid green;         
+        vertical-align: middle;              
+        margin: 0 10px;         
+        } 
+
+    .cards-wrapper {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 0px;
+        width: 70%;
+        padding-left: 235px;
+    }
+
+    .cardsmini {
+        position: relative;
+        width: 200px;
+        height: 270px;
+        background-color: #333;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 20px;
+        text-align: center;
+        color: white;
+    }
+
+    .cardsmini h2 {
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .cardsmini button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .cardsmini button:hover {
+        transform: translateY(-5px);
+    }
+</style>
+
+<div class="menucard-sushi">
+    <div class="titles_h3">
+        <h3>Restaurant</h3>
+    </div>
+    <div class="titles_h1">
+      <h1>Explore our splendid menu</h1>
+    <div>
+    <div class="cards-wrapper">
+    <div class="cardsmini">
+            <div>
+                <h2>Sweet Desserts</h2>
+                <button>View menu</button>
+            </div>
+    </div>
+
+    <div class="cardsmini">
+        <div>
+            <h2>Amazing Coffee</h2>
+            <button>View menu</button>
+        </div>
+    </div>
+
+    <div class="cardsmini">
+        <div>
+            <h2>Best Breakfasts</h2>
+            <button>View menu</button>
+        </div>
+    </div>
+
+    <div class="cardsmini">
+        <div>
+            <h2>Great cocktails</h2>
+            <button>View menu</button>
+        </div>
+    </div>
+    <div>
+</div>
