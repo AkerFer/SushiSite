@@ -48,11 +48,13 @@
         text-align: center;
     }
 
-    .cardsmini {
+    .cardsmini_sweet {
         position: relative;
+        background-image: url({% static 'images/sweet_desert.png'%});
+        background-position: center;
+        background-size: cover;
         width: 170px;
         height: 250px;
-        background-color: #333;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         border-radius: 10px;
         overflow: hidden;
@@ -63,12 +65,12 @@
         color: white;
     }
 
-    .cardsmini h2 {
+    .cardsmini_sweet h2 {
         margin: 0;
         font-size: 24px;
     }
 
-    .cardsmini button {
+    .cardsmini_sweet button {
         margin-top: 15px;
         padding: 10px 20px;
         font-size: 16px;
@@ -80,7 +82,159 @@
         transition: transform 0.3s ease;
     }
 
-    .cardsmini button:hover {
+    .cardsmini_sweet button:hover {
+        transform: translateY(-5px);
+    }
+
+    .cardsmini_coffee {
+        position: relative;
+        background-image: url({% static 'images/coffee.png'%});
+        background-position: center;
+        background-size: cover;
+        width: 170px;
+        height: 250px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 20px;
+        color: white;
+    }
+
+    .cardsmini_coffee h2 {
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .cardsmini_coffee button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .cardsmini_coffee button:hover {
+        transform: translateY(-5px);
+    }
+
+    .cardsmini_break {
+        position: relative;
+        background-image: url({% static 'images/breakfast.png'%});
+        background-position: center;
+        background-size: cover;
+        width: 170px;
+        height: 250px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 20px;
+        color: white;
+    }
+
+    .cardsmini_break h2 {
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .cardsmini_break button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .cardsmini_break button:hover {
+        transform: translateY(-5px);
+    }
+
+    .cardsmini_cocktail {
+        position: relative;
+        background-image: url({% static 'images/cocktail.png'%});
+        background-position: center;
+        background-size: cover;
+        width: 170px;
+        height: 250px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 20px;
+        color: white;
+    }
+
+    .cardsmini_cocktail h2 {
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .cardsmini_cocktail button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .cardsmini_cocktail button:hover {
+        transform: translateY(-5px);
+    }
+
+    .cardsmini_dishes {
+        position: relative;
+        background-image: url({% static 'images/dishes.png'%});
+        background-position: center;
+        background-size: cover;
+        width: 170px;
+        height: 250px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 20px;
+        color: white;
+    }
+
+    .cardsmini_dishes h2 {
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .cardsmini_dishes button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .cardsmini_dishes button:hover {
         transform: translateY(-5px);
     }
 </style>
@@ -93,35 +247,35 @@
       <h1>Explore our splendid menu</h1>
     <div>
     <div class="cards-wrapper">
-    <div class="cardsmini">
+    <div class="cardsmini_sweet">
             <div>
                 <h2>Sweet Desserts</h2>
                 <button>View menu</button>
             </div>
     </div>
 
-    <div class="cardsmini">
+    <div class="cardsmini_coffee">
         <div>
             <h2>Amazing Coffee</h2>
             <button>View menu</button>
         </div>
     </div>
 
-    <div class="cardsmini">
+    <div class="cardsmini_break">
         <div>
             <h2>Best Breakfasts</h2>
             <button>View menu</button>
         </div>
     </div>
 
-    <div class="cardsmini">
+    <div class="cardsmini_cocktail">
         <div>
             <h2>Great cocktails</h2>
             <button>View menu</button>
         </div>
     </div>
 
-    <div class="cardsmini">
+    <div class="cardsmini_dishes">
         <div>
             <h2>Unusual dishes</h2>
             <button>View menu</button>
@@ -129,9 +283,4 @@
     </div>
 
     <div>
-</div>
-
-
-<div class="popular_sushi_wrapper">
-
 </div>
