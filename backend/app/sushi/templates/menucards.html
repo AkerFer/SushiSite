@@ -29,6 +29,14 @@
         font-family: sans-serif;  
         color: green; 
     }
+    .titles_p {
+        margin: 0px 350px;
+        padding-bottom: 40px;
+        font-size: 13px;
+        font-family: sans-serif;
+        color: #333;
+        text-align: center;
+    }
 
     .titles_h3 h3::before,
     .titles_h3 h3::after {
@@ -40,11 +48,11 @@
         margin: 0 10px;         
         } 
 
-    .cards-wrapper {
+    .menucard-sushi .cards-wrapper {
         display:flex;
         justify-content: space-between;
         align-items:center;
-        margin-left: 120px;
+        margin: 0px 185px;
         text-align: center;
     }
 
@@ -237,6 +245,43 @@
     .cardsmini_dishes button:hover {
         transform: translateY(-5px);
     }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0px;
+        margin:0px 80px;
+      }
+      
+      .cardsushi {
+        text-align: center;
+        margin: 0px 50px;
+      }
+      
+      .card-image {
+        width: 150px;
+        height: 130px;
+        object-fit: cover;
+        margin-bottom: 10px;
+        border-radius: 100%;
+      }
+      .card-image-samurai{
+        width: 300px;
+        height: 250px;
+        margin-bottom: 10px;
+        padding-top: 50px;
+        border-radius: 100%;
+      }
+      
+      .cardsushi p {
+        font-family: sans-serif;
+        font-size: 20px;
+        color: #333;
+      }
+      .cardsushi h2 {
+        font-family: sans-serif;
+        color: #4CAF50;
+      }
 </style>
 
 <div class="menucard-sushi">
@@ -282,5 +327,36 @@
         </div>
     </div>
 
-    <div>
+</div>
+
+<div class="popular-sushi">
+  <div class="titles">
+   <div class="titles_h3">
+        <h3>Restaurant</h3>
+    </div>
+   <div class="titles_h1">
+     <h1>Most popular sushi meals</h1>
+    </div>
+    <div class="titles_p">
+        <p>Aliquet egestas gravida orci nulla lacus suspendisse. Vel ullamcorper ultrices volutpat enim dignissim id purus. Urna quam massa urna dolor enim dui lectus id. Tristique dignissim pharetra feugiat mattis non. Vivamus libero feugiat odio eget potenti.</p>
+       </div>
+  </div>
+
+  <div class="grid-container">
+    <div class="cardsushi">
+      <img src="{% static 'images/urumaki_sushi.png' %}" alt="Image 1" class="card-image">
+      <h2> Urumaki sushi </h2>
+      <p>Aliquet egestas gravida orci...</p>
+    </div>
+    <div class="cardsushi">
+      <img src="{% static 'images/samurai_sushi.png' %}" alt="Image 2" class="card-image-samurai">
+      <h2> Samurai-set sushi </h2>
+      <p>Vel ullamcorper ultrices.</p>
+    </div>
+    <div class="cardsushi">
+      <img src="{% static 'images/maki_sushi.png' %}" alt="Image 3" class="card-image">
+      <h2> Maki sushi </h2>
+      <p>Aliquet egestas gravida orci nulla lacus suspendisse...</p>
+    </div>
+  </div>
 </div>
