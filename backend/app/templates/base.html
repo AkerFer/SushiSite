@@ -11,17 +11,19 @@
      {% block css %}{% endblock %}
 
   </head>
-  <body>
+  <body style="margin: 0px;">
 
     <header>
     {% include 'navbar.html'%}
     </header>
 
-
      <div class="base-container">
          {% block content %}{% endblock %}
      </div>
-   
+
+    <footer>
+      {% include 'footer.html'%}
+    </footer>
 
     {% block js %}{% endblock %}
   </body>

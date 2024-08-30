@@ -1,0 +1,72 @@
+{% load static %}
+
+<style>
+    footer {
+        background-color: black;
+        color: snow;
+        padding: 20px 0;
+        text-align: center;
+        margin-bottom: 10px;
+        font-family: sans-serif;
+    }
+    
+    .footer-container {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+    }
+    
+    .footer-section {
+        flex: 1;
+        padding: 0 15px;
+        margin-bottom: 10px;
+    }
+    
+    .footer-section h3 {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    .footer-section p {
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    .footer-section img {
+        padding-bottom: 30px;
+    }
+    
+    .contact-number {
+        color: #4CAF50;
+        font-size: 20px;
+        font-family: "Helvetica Neue",Helvetica;
+    }
+    
+    .footer-note {
+        margin-top: 20px;
+        font-size: 12px;
+    }
+        
+
+</style>
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Opening Hours</h3>
+            <p>Monday - Sunday<br>10AM - 10PM</p>
+        </div>
+        <div class="footer-section">
+            <a href="{% url 'landing_page' %}"><img src="{% static 'icons/logo_restaurant.png' %}" alt="Logo"></a>
+            <h3>Book a Table</h3>
+            <p>Urna quam massa urna dolor enim dui<br>Tristique dignissim pharetra feugiat<br>Vivamus libero feugiat</p>
+            <p class="contact-number">(525) 847-0411</p>
+        </div>
+        <div class="footer-section">
+            <h3>Our Address</h3>
+            <p>8911 Tanglewood Ave.<br>Capitol Heights, MD 20743</p>
+        </div>
+    </div>
+    <p class="footer-note">©Copyright Restaurant 2023. Design by Figma.guru</p>
+</footer>
