@@ -1,0 +1,209 @@
+{% load static %}
+
+<style> 
+    .menu-eats{
+        margin: 0px 40px;
+        font-family: sans-serif;
+    }
+    .main-menu-eats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .category-eats {
+        display: grid;
+        gap: 10px;
+        padding-bottom: 50px;
+    }
+    .main-menu-eats-item {
+        display: grid;
+        grid-template-columns: 70px 1fr auto;
+        align-items: center;
+    }
+    .main-menu-eats-item img {
+        width: 64px;
+        height: 64px;
+        border-radius: 60px;
+        background-color: #eee;
+    }
+    .main-menu-eats-item .description {
+        font-size: 0.9em;
+        color: gray;
+    }
+    .main-menu-eats-item .price {
+        font-weight: bold;
+    }
+   
+    .category-eats-course{
+        padding-bottom: 100px;
+        display: grid;
+        gap:30px;
+    }
+    .category-eats-h2{
+        width: 14%;
+        border-bottom: 2px solid green;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+</style>
+
+
+
+<div class="titles_h3">
+    <h3>Restaurant</h3>
+</div>
+<div class="titles_h1">
+  <h1>Order online</h1>
+<div>
+<div class="titles_p">
+    <p>Aliquet egestas gravida orci nulla lacus suspendisse. Vel ullamcorper ultrices volutpat enim dignissim id purus. Urna quam massa urna dolor enim dui lectus id. Tristique dignissim pharetra feugiat mattis non. Vivamus libero feugiat odio eget potenti.</p>
+</div>
+
+<div class="menu-eats">
+ <div class="main-menu-eats">
+   <div class="category-eats">
+      <h2 class="category-eats-h2">Salads</h2>
+       <div class="main-menu-eats-item">
+        <img src="{% static 'images/greek_salad.png' %}" alt="Greek Salad">
+          <div>
+             <div>Greek Salad</div>
+               <div class="description">Aliquet egestas, gravida, orci nulla, lacus
+                 <span>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span>
+             </div>
+            </div>
+            <div class="price">$6</div>
+        </div>
+        <div class="main-menu-eats-item">
+            <img src="{% static 'images/tuna_salad.png' %}" alt="Summer Salad">
+            <div>
+                <div>Summer Salad</div>
+                <div class="description">Aliquet egestas, gravida, orci nulla, lacus 
+                    <span>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span>
+                </div>
+            </div>
+            <div class="price">$10</div>
+        </div>
+        <div class="category-eats-course">
+            <h2 class="category-eats-h2">Main Course</h2>
+            <div class="main-menu-eats-item">
+                <img src="{% static 'pizza_images/steak_meat.png' %}" alt="Morbi Aenean Steak">
+                <div>
+                    <div>Meat Steak</div>
+                    <div class="description">Aliquet egestas, gravida, orci nulla, lacus
+                      <span>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span>
+                    </div>
+                </div>
+                <div class="price">$15</div>
+            </div>
+            <div class="main-menu-eats-item">
+                <img src="{% static 'pizza_images/steak_fish.png' %}" alt="Volutpat Special">
+                <div>
+                    <div>Fish Steak</div>
+                    <div class="description">Aliquet egestas, gravida, orci nulla, lacus
+                     <span>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span>
+                    </div>
+                </div>
+                <div class="price">$17</div>
+            </div>
+            <div class="main-menu-eats-item">
+                <img src="{% static 'pizza_images/steak_zubatka.png' %}" alt="Ultrices Volutpat Pasta">
+                <div>
+                    <div>Zubatka Steak</div>
+                    <div class="description">Aliquet egestas, gravida, orci nulla, lacus
+                      <span>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span>
+                    </div>
+                </div>
+                <div class="price">$12</div>
+            </div>
+        </div>
+    </div>
+    <div class="category-eats">
+        <h2 class="category-eats-h2">Pizzas</h2>
+        <div class="main-menu-eats-item">
+            <img src="{% static 'pizza_images/pizza_argentina.png' %}" alt="Mexican Pizza">
+            <div>
+                <div>Argentinas Pizza</div>
+                <div class="description">Aliquet egestas, gravida, orci nulla, lacus
+                 <span>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span>
+                </div>
+            </div>
+            <div class="price">$20</div>
+        </div>
+        <div class="main-menu-eats-item">
+            <img src="{% static 'pizza_images/pizza_egg.png' %}" alt="Mexican Pizza">
+            <div>
+                <div>Pizza Egg</div>
+                <div class="description">Aliquet egestas, gravida, orci nulla, lacus
+                 <span>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span>
+                </div>
+            </div>
+            <div class="price">$8</div>
+        </div>
+        <div class="main-menu-eats-item">
+            <img src="{% static 'pizza_images/pizza_mexican.png' %}" alt="Mexican Pizza">
+            <div>
+                <div>Mexican Pizza</div>
+                <div class="description">Aliquet egestas, gravida, orci nulla, lacus
+                    <span>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span>
+                </div>
+            </div>
+            <div class="price">$10</div>
+        </div>
+        <div class="main-menu-eats-item">
+            <img src="{% static 'pizza_images/pizza_xachapuri.png' %}" alt="Prosciutto Pizza">
+            <div>
+                <div>Xachapuri Pizza</div>
+                <div class="description">Aliquet egestas, gravida, orci nulla, lacus
+                    <span>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span>
+                </div>
+            </div>
+            <div class="price">$12</div>
+        </div>
+        <div class="main-menu-eats-item">
+            <img src="{% static 'pizza_images/pizza_classic.png' %}" alt="Pepperoni Pizza">
+            <div>
+                <div>Pepperoni Pizza</div>
+                <div class="description">Aliquet egestas, gravida, orci nulla, lacus
+                    <span>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span>
+                </div>
+            </div>
+            <div class="price">$12</div>
+        </div>
+        <div class="main-menu-eats-item">
+            <img src="{% static 'pizza_images/pizza_plov.png' %}" alt="Viennese Pizza">
+            <div>
+                <div>Plov Pizza</div>
+                <div class="description">Aliquet egestas, gravida, orci nulla, lacus
+                    <span>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span>
+                </div>
+            </div>
+            <div class="price">$14</div>
+        </div>
+        <div class="main-menu-eats-item">
+            <img src="{% static 'pizza_images/pizza_meat.png' %}" alt="Marinara Pizza">
+            <div>
+                <div>Marinara Pizza</div>
+                <div class="description">Aliquet egestas, gravida, orci nulla, lacus
+                    <span>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span>
+                </div>
+            </div>
+            <div class="price">$16</div>
+        </div>
+        <div class="main-menu-eats-item">
+            <img src="{% static 'pizza_images/pizza_napoletana.png' %}" alt="Napoletana Pizza">
+            <div>
+                <div>Napoletana Pizza</div>
+                <div class="description">Aliquet egestas, gravida, orci nulla, lacus
+                    <span>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span>
+                </div>
+            </div>
+            <div class="price">$22</div>
+        </div>
+    </div>
+ </div>
+</div>
+
+
+
