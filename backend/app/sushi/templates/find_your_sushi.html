@@ -1,2 +1,93 @@
 {% load static %}
 
+<style> 
+    .find-your-sushi {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 20px;
+        height: 70vh;
+        padding-bottom: 20px;
+      }
+      
+      .image-stack {
+        position: relative;
+        width: 200px;
+        height: 230px;
+        padding-bottom: 100px;
+        padding-left: 250px;
+      }
+      
+      .image-stack img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+       
+      }      
+      .image-1 {
+        z-index: 1;
+        transform: translate(-30px, 30px);
+      }
+      
+      .image-2 {
+        z-index: 2;
+        transform: translate(20px, -20px);
+      }
+      .find-sushi-content h2 {
+        color: #33cc33;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .find-sushi-content {
+      padding-right: 230px;
+    }
+      .find-sushi-content p {
+        font-size: 14px;
+        color: #333;
+        margin-bottom: 20px;
+        margin-right: 30px;
+        text-align: center;
+      }
+
+      .find-sushi-content h1{
+        color: #333;
+        font-size: 30px;
+        text-align: left;
+        padding-bottom: 1px;
+        font-family: sans-serif;
+      }
+      
+      .reservation-button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+</style>
+
+
+<div class="titles_h3">
+    <h3>Restaurant</h3>
+</div>
+<div class="titles_h1">
+  <h1>Generate your sushi</h1>
+<div>
+<div class="find-your-sushi">
+    <div class="image-stack">
+      <img src="{% static 'images/dishes.png' %}" alt="Image 1" class="image-1">
+      <img src="{% static 'images/breakfast.png' %}" alt="Image 2" class="image-2">
+    </div>
+    <div class="find-sushi-content">
+      <h2>Restaraunt--</h2>
+      <h1>Best place to generate your sushi you love</h1>
+      <p>Aliquet egestas gravida orci nulla lacus suspendisse. Vel ullamcorper ultrices volutpat enim dignissim id purus. Urna quam massa urna dolor enim dui lectus id. Tristique dignissim pharetra feugiat mattis non. Vivamus libero feugiat odio eget potenti.</p>
+      <button class="reservation-button">Generate your sushi</button>
+    </div>
+  </div>
+  
