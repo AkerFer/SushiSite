@@ -1,0 +1,236 @@
+{% load static %}
+
+<style>
+    .carousel_clients{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    .carousel {
+        position: relative;
+        width: 100%;
+      }
+      
+      .carousel-track-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        padding: 0 40px;
+      }
+      
+      .carousel-track {
+        display: flex;
+        justify-content: center;
+        transition: transform 0.5s ease-in-out;
+      }
+      
+      .carousel-item {
+        flex: 0 0 18%; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.5s ease-in-out;
+        opacity: 0.6;
+        margin: 0 25px;
+        height: 500px;
+      }
+      
+      .carousel-item img {
+        width: 170px;
+        height: auto;
+        border-radius: 50%;
+        transition: transform 0.5s ease-in-out;
+        cursor: pointer;
+      }
+      
+      .carousel-item h1 {
+        font-size: 16px;
+        text-align: center;
+        margin-top: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+      
+      .carousel-item.active h1 {
+        opacity: 1;
+      }
+      .carousel-item p{
+        font-size: 13px;
+        margin-top: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        color: black;
+        text-align: center;
+      }
+      .carousel-item.active p{
+        opacity: 1;
+      }
+      
+      .carousel-item.active {
+        transform: scale(1.5);
+        opacity: 1;
+      }
+      
+      .carousel-item.prev,
+      .carousel-item.next {
+        transform: scale(1.2);
+        opacity: 0.8;
+      }
+      
+      .carousel-buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        transition: margin-top 0.3s ease-in-out;
+      }
+      
+      .carousel-buttons.active-margin {
+        margin-top: 50px;
+      }
+      
+      .carousel-buttons button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 10px;
+        margin: 0 5px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 40px;
+        height: 40px;
+        transition: background-color 0.3s ease-in-out;
+      }
+      
+      .carousel-buttons button:hover {
+        background-color: #45a049;
+      }
+      
+      .carousel-buttons button:focus {
+        outline: none;
+      }
+</style>
+
+
+<div class="titles_h3">
+    <h3>Restaurant</h3>
+</div>
+<div class="titles_h1">
+ <h1>What our clients say about us</h1>
+</div>
+<div class="carousel_clients">
+    <div class="carousel">
+        <div class="carousel-track-container">
+          <div class="carousel-track">
+            <div class="carousel-item">
+              <img src="{% static 'images/tandziro_sushi.png' %}" alt="Image 1">
+              <h1>Тандзиро Камадо</h1>
+              <p>Тебе больно и тяжело, но нужно стараться <br> дальше сьесть Суши</p>
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'pizza_images/midoria_steak.png' %}" alt="Image 2">
+              <h1>Идзуки Мидория</h1>
+              <p>Не вздумай даже думать о поражении! Ты — это ты, только потому что никогда не сдаешься, поэтому сьешь Стейк</p>
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'pizza_images/satoru_pizza.png' %}" alt="Image 3">
+              <h1>Сатору Годжо</h1>
+              <p>Между небом и землей, лишь я достойный сьесть Пиццу!</p>
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'images/sukuna_salad.png' %}" alt="Image 4">
+              <h1>Рёмен Сукуна</h1>
+              <p>Расширение территории Салатовый Храм </p>
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'images/naruto_sushi.png' %}" alt="Image 5">
+              <h1>Наруто Узумаки</h1>
+              <p> Ichiraku Sushi! Ichiraku Sushi! <br> Dattebayo!!</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-buttons">
+          <button class="prev-button">&#9664;</button>
+          <button class="next-button">&#9654;</button>
+        </div>
+    </div>
+      
+</div>
+
+{%block js%}
+
+<script>
+
+    const items = document.querySelectorAll('.carousel-item');
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
+    const buttonsContainer = document.querySelector('.carousel-buttons');
+    
+    let currentIndex = 0;
+    
+    function updateCarousel() {
+      const totalItems = items.length;
+    
+      items.forEach((item, index) => {
+        item.classList.remove('active', 'prev', 'next');
+    
+        if (index === currentIndex) {
+          item.classList.add('active');
+        } else if (index === (currentIndex - 1 + totalItems) % totalItems) {
+          item.classList.add('prev');
+        } else if (index === (currentIndex + 1) % totalItems) {
+          item.classList.add('next');
+        }
+      });
+    
+      // Добавление отступа при активной картинке
+      if (items[currentIndex].classList.contains('active')) {
+        buttonsContainer.classList.add('active-margin');
+      } else {
+        buttonsContainer.classList.remove('active-margin');
+      }
+    }
+    
+    function showNextSlide() {
+      currentIndex = (currentIndex + 1) % items.length;
+      updateCarousel();
+    }
+    
+    function showPrevSlide() {
+      currentIndex = (currentIndex - 1 + items.length) % items.length;
+      updateCarousel();
+    }
+    
+    nextButton.addEventListener('click', showNextSlide);
+    prevButton.addEventListener('click', showPrevSlide);
+    
+    // Добавление клика по картинке
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        currentIndex = Array.from(items).indexOf(item);
+        updateCarousel();
+      });
+    });
+    
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') {
+        showNextSlide();
+      } else if (e.key === 'ArrowLeft') {
+        showPrevSlide();
+      }
+    });
+    
+    // Initial update
+    updateCarousel();
+    
+    
+
+
+</script>
+{% endblock %}
+
