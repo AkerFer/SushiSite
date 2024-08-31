@@ -71,6 +71,42 @@
    border-radius: 5px;
    font-size: 14px;
  }
+
+ @media (max-width: 400px) {
+  .find-your-sushi {
+    grid-template-columns: 1fr;
+    height: auto;
+    padding-bottom: 10px;
+  }
+
+  .image-stack {
+    display: none; /* Убираем изображения */
+  }
+
+  .find-sushi-content {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .find-sushi-content h2 {
+    font-size: 16px;
+  }
+
+  .find-sushi-content h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .find-sushi-content p {
+    margin-right: 0;
+  }
+  
+  .reservation-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+}
  
  .favourite-dishes-container {
    display: grid;
@@ -252,15 +288,18 @@
     margin-bottom: 20px; /* Отступ снизу, чтобы предотвратить перекрытие других элементов */
   }
 }
+
 </style>
 
-
-<div class="titles_h3">
-    <h3>Restaurant</h3>
+<div class="titles_find_sushi">
+  <div class="titles_h3">
+     <h3>Restaurant</h3>
+  </div>
+  <div class="titles_h1">
+     <h1>Generate your sushi</h1>
+  <div>
 </div>
-<div class="titles_h1">
-  <h1>Generate your sushi</h1>
-<div>
+
 
 <div class="find-your-sushi">
     <div class="image-stack">
