@@ -114,15 +114,25 @@
       .carousel-buttons button:focus {
         outline: none;
       }
+      @media (max-width: 400px) {
+        .carousel_clients {
+            display: none;
+        }
+        .titles_carousel{
+          display: none;
+        }
+      }
 </style>
 
-
-<div class="titles_h3">
+<div class="titles_carousel">
+  <div class="titles_h3">
     <h3>Restaurant</h3>
+  </div>
+  <div class="titles_h1">
+    <h1>What our clients say about us</h1>
+  </div>
 </div>
-<div class="titles_h1">
- <h1>What our clients say about us</h1>
-</div>
+
 <div class="carousel_clients">
     <div class="carousel">
         <div class="carousel-track-container">
