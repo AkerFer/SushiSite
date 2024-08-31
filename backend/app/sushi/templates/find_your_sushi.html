@@ -80,7 +80,7 @@
   }
 
   .image-stack {
-    display: none; /* Убираем изображения */
+    display: none; 
   }
 
   .find-sushi-content {
@@ -106,7 +106,7 @@
     padding: 12px;
     font-size: 16px;
   }
-}
+ }
  
  .favourite-dishes-container {
    display: grid;
@@ -145,32 +145,32 @@
 
  @media (max-width: 400px) {
   .favourite-dishes-container {
-    grid-template-columns: 1fr 1fr; /* Два столбца на маленьких экранах */
-    grid-template-rows: repeat(3, auto); /* Строки автоматически подстраиваются */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
   }
 
   .favourite-dishes-item img {
-    width: 150px; /* Уменьшение размера изображения */
-    height: 150px; /* Уменьшение размера изображения */
+    width: 150px;
+    height: 150px;
   }
 
   .favourite-dishes-item h2 {
-    font-size: 20px; /* Уменьшение размера шрифта заголовка */
+    font-size: 20px;
   }
 
   .favourite-dishes-item p {
-    font-size: 12px; /* Уменьшение размера шрифта описания */
+    font-size: 12px;
   }
 
   .favourite-dishes {
-    margin: 90px 0; /* Увеличенные отступы сверху и снизу для мобильных устройств */
+    margin: 90px 0;
   }
-}
+ }
 
  .learn-learn-more-container {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr; /* Left column twice as wide as the others */
-    grid-template-rows: repeat(3, 1fr); /* Three rows */
+    grid-template-columns: 2fr 1fr 1fr; 
+    grid-template-rows: repeat(3, 1fr); 
     grid-template-areas: 
         "large small1 small2 small3"
         "large small4 small5 small6";
@@ -250,45 +250,44 @@
  @media (max-width: 400px) {
   .learn-learn-more-container {
     display: grid;
-    grid-template-columns: 1fr; /* Одна колонка */
-    grid-template-rows: repeat(3, auto); /* Автоматическая высота строк */
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
     grid-template-areas: 
         "item1"
         "item2"
         "item3";
-    height: auto; /* Высота адаптируется автоматически */
+    height: auto;
   }
 
   .learn-more-item {
-    padding: 20px; /* Уменьшенный отступ внутри блоков */
-    box-sizing: border-box; /* Включаем padding в общую ширину и высоту */
+    padding: 20px;
+    box-sizing: border-box;
   }
 
   .learn-more-item.large {
     grid-area: item1;
-    height: 250px; /* Увеличенная высота для большого блока */
-    font-size: 1.2em; /* Увеличенный размер шрифта */
+    height: 250px;
+    font-size: 1.2em;
   }
 
   .learn-more-item.small1,
   .learn-more-item.small2 {
     grid-area: item2;
-    height: 200px; /* Увеличенная высота для маленьких блоков */
-    font-size: 1em; /* Размер шрифта по умолчанию */
+    height: 200px; 
+    font-size: 1em;
   }
 
   .learn-more-item.small3,
   .learn-more-item.small4,
   .learn-more-item.small5,
   .learn-more-item.small6 {
-    display: none; /* Скрываем лишние блоки */
+    display: none;
   }
 
   .learn_more_about_our {
-    margin-bottom: 20px; /* Отступ снизу, чтобы предотвратить перекрытие других элементов */
+    margin-bottom: 20px;
   }
-}
-
+ }
 </style>
 
 <div class="titles_find_sushi">

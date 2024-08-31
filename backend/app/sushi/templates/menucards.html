@@ -245,6 +245,42 @@
         transform: translateY(-5px);
     }
 
+    
+    @media (max-width: 400px) {
+        .titles_p {
+            margin: 0 10px;
+            padding-bottom: 20px;
+            font-size: 12px;
+        }
+    
+        .titles_h1 h1 {
+            font-size: 30px;
+        }
+    
+        .menucard-sushi .cards-wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin: 0; 
+            text-align: center;
+        }
+    
+        .cardsmini_sweet, .cardsmini_coffee, .cardsmini_break, .cardsmini_cocktail, .cardsmini_dishes {
+            margin: 70px;
+            width: 170px; 
+            height: 250px; 
+        }
+    
+        .cardsmini_sweet h2, .cardsmini_coffee h2, .cardsmini_break h2, .cardsmini_cocktail h2, .cardsmini_dishes h2 {
+            font-size: 24px; 
+        }
+    
+        .cardsmini_sweet button, .cardsmini_coffee button, .cardsmini_break button, .cardsmini_cocktail button, .cardsmini_dishes button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    }
+
     .grid-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -280,6 +316,51 @@
       .cardsushi h2 {
         font-family: sans-serif;
         color: #4CAF50;
+      }
+
+      @media (max-width: 400px) {
+        .grid-container {
+          grid-template-columns: 1fr; 
+          margin: 0px 10px;
+        }
+      
+        .cardsushi {
+          margin: 10px 0; 
+        }
+      
+        .card-image {
+          width: 120px; 
+          height: 100px;
+        }
+      
+        .card-image-samurai {
+          width: 200px; 
+          height: 170px;
+          padding-top: 20px;
+        }
+      
+        .cardsushi p {
+          font-size: 16px; 
+        }
+      
+        .cardsushi h2 {
+          font-size: 18px; 
+        }
+      
+        .titles_h3 h3,
+        .titles_h1 h1,
+        .titles_p p {
+          text-align: center; 
+        }
+      
+        .titles_h1 h1 {
+          font-size: 24px; 
+        }
+      
+        .titles_p p {
+          font-size: 14px; 
+          margin: 0;
+        }
       }
 </style>
 
