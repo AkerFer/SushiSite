@@ -21,4 +21,5 @@ urlpatterns = [
     path("", include("sushi.urls")),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
+    path('', include('user.urls'))
 ]
