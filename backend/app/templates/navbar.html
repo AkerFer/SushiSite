@@ -118,7 +118,7 @@
     <div class="nav-links">
         <a href="#home">Home</a>
         <a href="#menu">Menu</a>
-        <a href="#about">About Us</a>
+        <a href="{% url "sushi_card_list" %}">Create Sushi</a>
         <a href="#contact">Contact Us</a>
 
         {% if request.user.is_authenticated %}
