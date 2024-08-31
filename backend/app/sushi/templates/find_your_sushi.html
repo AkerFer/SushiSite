@@ -107,6 +107,30 @@
    height: 60vh;
  }
 
+ @media (max-width: 400px) {
+  .favourite-dishes-container {
+    grid-template-columns: 1fr 1fr; /* Два столбца на маленьких экранах */
+    grid-template-rows: repeat(3, auto); /* Строки автоматически подстраиваются */
+  }
+
+  .favourite-dishes-item img {
+    width: 150px; /* Уменьшение размера изображения */
+    height: 150px; /* Уменьшение размера изображения */
+  }
+
+  .favourite-dishes-item h2 {
+    font-size: 20px; /* Уменьшение размера шрифта заголовка */
+  }
+
+  .favourite-dishes-item p {
+    font-size: 12px; /* Уменьшение размера шрифта описания */
+  }
+
+  .favourite-dishes {
+    margin: 90px 0; /* Увеличенные отступы сверху и снизу для мобильных устройств */
+  }
+}
+
  .learn-learn-more-container {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr; /* Left column twice as wide as the others */
@@ -186,6 +210,48 @@
  .learn_more_about_our{
   height: 55vh;
  }
+
+ @media (max-width: 400px) {
+  .learn-learn-more-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Одна колонка */
+    grid-template-rows: repeat(3, auto); /* Автоматическая высота строк */
+    grid-template-areas: 
+        "item1"
+        "item2"
+        "item3";
+    height: auto; /* Высота адаптируется автоматически */
+  }
+
+  .learn-more-item {
+    padding: 20px; /* Уменьшенный отступ внутри блоков */
+    box-sizing: border-box; /* Включаем padding в общую ширину и высоту */
+  }
+
+  .learn-more-item.large {
+    grid-area: item1;
+    height: 250px; /* Увеличенная высота для большого блока */
+    font-size: 1.2em; /* Увеличенный размер шрифта */
+  }
+
+  .learn-more-item.small1,
+  .learn-more-item.small2 {
+    grid-area: item2;
+    height: 200px; /* Увеличенная высота для маленьких блоков */
+    font-size: 1em; /* Размер шрифта по умолчанию */
+  }
+
+  .learn-more-item.small3,
+  .learn-more-item.small4,
+  .learn-more-item.small5,
+  .learn-more-item.small6 {
+    display: none; /* Скрываем лишние блоки */
+  }
+
+  .learn_more_about_our {
+    margin-bottom: 20px; /* Отступ снизу, чтобы предотвратить перекрытие других элементов */
+  }
+}
 </style>
 
 
@@ -219,6 +285,8 @@
 <div class="titles_p">
     <p>Aliquet egestas gravida orci nulla lacus suspendisse. Vel ullamcorper ultrices volutpat enim dignissim id purus. Urna quam massa urna dolor enim dui lectus id. Tristique dignissim pharetra feugiat mattis non. Vivamus libero feugiat odio eget potenti.</p>
 </div>
+
+
 
 <div class="favourite-dishes">
   <div class="favourite-dishes-container">
