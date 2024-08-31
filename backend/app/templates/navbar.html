@@ -2,31 +2,103 @@
 
 <style>
     nav {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        padding-top: 30px;
-    }
-    nav .right {
-        text-align: right;
-    }
-    nav a{
-        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        background-image: url('{% static "images/nav-background.jpg" %}'); 
+        background-size: cover;
+        background-position: center;
         color: white;
-        font-family: sans-serif;
-        padding: 10px 20px;
-        display: inline-block;
+        position: relative;
     }
-    nav a:active{
-        color: green;
+
+    nav .left img {
+        height: 40px; 
+    }
+    .burger-menu {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        color: white;
+        padding: 10px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 10;
+    }
+    
+    .burger-menu div {
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 6px 0;
+        transition: 0.3s;
+    }
+    .nav-links {
+        display: flex;
+    }
+    
+    .nav-links.hidden {
+        display: none;
+    }
+    
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        background-color: #333; 
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh; 
+        padding-top: 60px;
+        z-index: 9;
+        transform: translateX(100%); 
+        transition: transform 0.3s ease; 
+    }
+    
+    .nav-links.active {
+        transform: translateX(0);
+    }
+    
+    .nav-links a {
+        padding: 15px;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        font-family: sans-serif;
+    }
+    
+    @media (max-width: 400px) {
+        .burger-menu {
+            display: block;
+        }
+        .nav-links {
+            display: none;
+        }
+        .nav-links a{
+            color: #4CAF50;
+        }
+        .nav-links.active {
+            display: flex;
+        }
     }
 </style>
 
 <nav>
+    <button class="burger-menu" aria-label="Toggle navigation">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
     <div class="left">
         <a href="{% url 'landing_page' %}"><img src="{% static 'icons/logo_restaurant.png' %}" alt="Logo"></a>
     </div>
-    <div class="right">
+    <div class="nav-links">
         <a href="#home">Home</a>
         <a href="#menu">Menu</a>
         <a href="#about">About Us</a>
@@ -34,3 +106,14 @@
         <a href="#login">Login</a>
     </div>
 </nav>
+
+{% block js%}
+
+<script> 
+    document.querySelector('.burger-menu').addEventListener('click', function() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    });
+</script>
+
+{% endblock %}
