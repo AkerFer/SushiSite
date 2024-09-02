@@ -1,293 +1,296 @@
 {% load static %}
 
 <style> 
- .find-your-sushi {
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     align-items: center;
-     gap: 20px;
-     height: 70vh;
-     padding-bottom: 20px;
- }
-      
- .image-stack {
-   position: relative;
-   width: 200px;
-   height: 230px;
-   padding-bottom: 100px;
-   padding-left: 250px;
- }
-       
- .image-stack img {
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-   border-radius: 10px;
-  
- }    
-
- .image-1 {
-   z-index: 1;
-   transform: translate(-30px, 30px);
- }
-       
- .image-2 {
-   z-index: 2;
-   transform: translate(20px, -20px);
- }
- 
- .find-sushi-content h2 {
-   color: #33cc33;
-   font-size: 18px;
-   margin-bottom: 10px;
- }
-
- .find-sushi-content {
-   padding-right: 230px;
- }
- .find-sushi-content p {
-   font-size: 14px;
-   color: #333;
-   margin-bottom: 20px;
-   margin-right: 30px;
-   text-align: center;
- }
- 
- .find-sushi-content h1{
-   color: #333;
-   font-size: 30px;
-   text-align: left;
-   padding-bottom: 1px;
-   font-family: sans-serif;
- }
-      
- .reservation-button {
-   padding: 10px 20px;
-   background-color: #4CAF50;
-   color: white;
-   border: none;
-   cursor: pointer;
-   border-radius: 5px;
-   font-size: 14px;
- }
-
- @media (max-width: 400px) {
   .find-your-sushi {
-    grid-template-columns: 1fr;
-    height: auto;
-    padding-bottom: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 20px;
+      height: 70vh;
+      padding-bottom: 20px;
   }
-
+      
   .image-stack {
-    display: none; 
+    position: relative;
+    width: 200px;
+    height: 230px;
+    padding-bottom: 100px;
+    padding-left: 250px;
+  }
+       
+  .image-stack img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }    
+
+  .image-1 {
+    z-index: 1;
+    transform: translate(-30px, 30px);
+  }
+       
+  .image-2 {
+    z-index: 2;
+    transform: translate(20px, -20px);
+  }
+ 
+  .find-sushi-content h2 {
+    color: #33cc33;
+    font-size: 18px;
+    margin-bottom: 10px;
   }
 
   .find-sushi-content {
-    padding-right: 0;
-    text-align: center;
-  }
-
-  .find-sushi-content h2 {
-    font-size: 16px;
-  }
-
-  .find-sushi-content h1 {
-    font-size: 24px;
-    text-align: center;
+    padding-right: 230px;
   }
 
   .find-sushi-content p {
-    margin-right: 0;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 20px;
+    margin-right: 30px;
+    text-align: center;
   }
-  
+ 
+  .find-sushi-content h1{
+    color: #333;
+    font-size: 30px;
+    text-align: left;
+    padding-bottom: 1px;
+    font-family: sans-serif;
+  }
+      
   .reservation-button {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
   }
- }
+
+    @media (max-width: 400px) {
+      .find-your-sushi {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding-bottom: 10px;
+      }
+
+      .image-stack {
+        display: none; 
+      }
+
+      .find-sushi-content {
+        padding-right: 0;
+        text-align: center;
+      }
+
+      .find-sushi-content h2 {
+        font-size: 16px;
+      }
+
+      .find-sushi-content h1 {
+        font-size: 24px;
+        text-align: center;
+      }
+
+      .find-sushi-content p {
+        margin-right: 0;
+      }
+  
+      .reservation-button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+      }
+    }
  
- .favourite-dishes-container {
-   display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   gap: 20px;
-   text-align: center;
- }
-
- .favourite-dishes-item {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
- }
- 
- .favourite-dishes-item img {
-     width: 200px;
-     height: 200px;
-     object-fit: cover;
-     border-radius: 100%;
- }
-
- .favourite-dishes-item p {
-     margin-top: 10px;
-     font-size: 14px;
- }
- .favourite-dishes-item h2 {
-   margin-top: 10px;
-   font-size: 25px;
-   font-family: sans-serif;
-   color: #4CAF50;
- }
- .favourite-dishes{
-   height: 60vh;
- }
-
- @media (max-width: 400px) {
   .favourite-dishes-container {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, auto);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
   }
 
+  .favourite-dishes-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+ 
   .favourite-dishes-item img {
-    width: 150px;
-    height: 150px;
-  }
-
-  .favourite-dishes-item h2 {
-    font-size: 20px;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 100%;
   }
 
   .favourite-dishes-item p {
-    font-size: 12px;
+      margin-top: 10px;
+      font-size: 14px;
   }
 
-  .favourite-dishes {
-    margin: 90px 0;
-  }
- }
-
- .learn-learn-more-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr; 
-    grid-template-rows: repeat(3, 1fr); 
-    grid-template-areas: 
-        "large small1 small2 small3"
-        "large small4 small5 small6";
-    width: 100%;
-    max-width: 2000px;
-    height: 600px;
- }
-
- .large {
-         grid-area: large;
- }
-
- .small1 { grid-area: small1; }
- .small2 { grid-area: small2; }
- .small3 { grid-area: small3; }
- .small4 { grid-area: small4; }
- .small5 { grid-area: small5; }
- .small6 { grid-area: small6; }
-
- .learn-more-item {
-   position: relative;
-   background-color: #333;
-   color: white;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-   padding: 50px;
+  .favourite-dishes-item h2 {
+    margin-top: 10px;
+    font-size: 25px;
+    font-family: sans-serif;
+    color: #4CAF50;
   }
 
- .learn-more-item img {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     z-index: 1;
-     opacity:0.7;
- }
+  .favourite-dishes{
+    height: 60vh;
+  }
 
- .learn-more-item h2 {
-     margin: 0;
-     font-size: 26px;
-     z-index: 2;
-     font-family: sans-serif;
-     color:white;
- }
- 
- .learn-more-item p {
-     margin: 10px 0;
-     font-size: 18px;
-     z-index: 2;
-     color: white;
-     font-family: sans-serif;
- }
+    @media (max-width: 400px) {
+       .favourite-dishes-container {
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: repeat(3, auto);
+       }
 
- .learn-more-item a {
-     color: white;
-     text-decoration: none;
-     border: 2px solid #32CD32;
-     padding: 10px 20px;
-     border-radius: 5px;
-     transition: background-color 0.3s ease;
-     z-index: 2;
- }
- 
- .learn-more-item a:hover {
-     background-color: #32CD32;
-     color: #000;
- }
- .learn_more_about_our{
-  height: 55vh;
- }
+       .favourite-dishes-item img {
+         width: 150px;
+         height: 150px;
+       }
 
- @media (max-width: 400px) {
+       .favourite-dishes-item h2 {
+         font-size: 20px;
+       }
+
+       .favourite-dishes-item p {
+         font-size: 12px;
+       }
+
+       .favourite-dishes {
+         margin: 90px 0;
+       }
+    }
+
   .learn-learn-more-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas: 
-        "item1"
-        "item2"
-        "item3";
-    height: auto;
+     display: grid;
+     grid-template-columns: 2fr 1fr 1fr; 
+     grid-template-rows: repeat(3, 1fr); 
+     grid-template-areas: 
+         "large small1 small2 small3"
+         "large small4 small5 small6";
+     width: 100%;
+     max-width: 2000px;
+     height: 600px;
   }
+
+  .large {
+          grid-area: large;
+  }
+
+  .small1 { grid-area: small1; }
+  .small2 { grid-area: small2; }
+  .small3 { grid-area: small3; }
+  .small4 { grid-area: small4; }
+  .small5 { grid-area: small5; }
+  .small6 { grid-area: small6; }
 
   .learn-more-item {
-    padding: 20px;
-    box-sizing: border-box;
+    position: relative;
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
   }
 
-  .learn-more-item.large {
-    grid-area: item1;
-    height: 250px;
-    font-size: 1.2em;
+  .learn-more-item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      opacity:0.7;
   }
 
-  .learn-more-item.small1,
-  .learn-more-item.small2 {
-    grid-area: item2;
-    height: 200px; 
-    font-size: 1em;
+  .learn-more-item h2 {
+      margin: 0;
+      font-size: 26px;
+      z-index: 2;
+      font-family: sans-serif;
+      color:white;
+  }
+ 
+  .learn-more-item p {
+      margin: 10px 0;
+      font-size: 18px;
+      z-index: 2;
+      color: white;
+      font-family: sans-serif;
   }
 
-  .learn-more-item.small3,
-  .learn-more-item.small4,
-  .learn-more-item.small5,
-  .learn-more-item.small6 {
-    display: none;
+  .learn-more-item a {
+      color: white;
+      text-decoration: none;
+      border: 2px solid #32CD32;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      z-index: 2;
+  }
+ 
+  .learn-more-item a:hover {
+      background-color: #32CD32;
+      color: #000;
   }
 
-  .learn_more_about_our {
-    margin-bottom: 20px;
+  .learn_more_about_our{
+   height: 55vh;
   }
- }
+
+    @media (max-width: 400px) {
+     .learn-learn-more-container {
+       display: grid;
+       grid-template-columns: 1fr;
+       grid-template-rows: repeat(3, auto);
+       grid-template-areas: 
+           "item1"
+           "item2"
+           "item3";
+       height: auto;
+     }
+  
+     .learn-more-item {
+       padding: 20px;
+       box-sizing: border-box;
+     }
+  
+     .learn-more-item.large {
+       grid-area: item1;
+       height: 250px;
+       font-size: 1.2em;
+     }
+  
+     .learn-more-item.small1,
+     .learn-more-item.small2 {
+       grid-area: item2;
+       height: 200px; 
+       font-size: 1em;
+     }
+  
+     .learn-more-item.small3,
+     .learn-more-item.small4,
+     .learn-more-item.small5,
+     .learn-more-item.small6 {
+       display: none;
+     }
+  
+     .learn_more_about_our {
+       margin-bottom: 20px;
+     }
+    }
 </style>
 
 <div class="titles_find_sushi">
@@ -298,7 +301,6 @@
      <h1>Generate your sushi</h1>
   <div>
 </div>
-
 
 <div class="find-your-sushi">
     <div class="image-stack">
@@ -313,7 +315,6 @@
     </div>
 </div>
 
-
 <div class="titles_h3">
     <h3>Restaurant</h3>
 </div>
@@ -323,8 +324,6 @@
 <div class="titles_p">
     <p>Aliquet egestas gravida orci nulla lacus suspendisse. Vel ullamcorper ultrices volutpat enim dignissim id purus. Urna quam massa urna dolor enim dui lectus id. Tristique dignissim pharetra feugiat mattis non. Vivamus libero feugiat odio eget potenti.</p>
 </div>
-
-
 
 <div class="favourite-dishes">
   <div class="favourite-dishes-container">
@@ -350,7 +349,6 @@
     </div>
  </div>
 </div>
-
 
 <div class="learn_more_about_our">
   <div class="learn-learn-more-container">

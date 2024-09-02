@@ -10,20 +10,24 @@
         align-items: center;
         height: 75vh;
     }
+
     .first-container{
         padding-left: 100px;
         padding-bottom: 50px;
     }
+
     .first-container h1{
         font-size: 60px;
         color: #4CAF50;
         font-family: Arial, Helvetica, sans-serif;
     }
+
     .first-container p{
         font-size: 15px;
         color: #4CAF50;
         font-family: sans-serif;
     }
+
     .first-container .main_menu{
         background-color: #4CAF50;
         color: white;
@@ -32,6 +36,7 @@
         cursor: pointer;
         font-family: sans-serif;
     }
+
     .first-container .seasonal_menu{
         background-color: #333;
         color: #4CAF50;
@@ -40,9 +45,11 @@
         cursor: pointer;
         font-family: sans-serif;
     }
+
     .second-container{
         padding-left: 250px;
     }
+
     .second-container .create-menu{
         padding: 30px;
         background-color: #ffffff;
@@ -50,19 +57,23 @@
         height: 100%;
         padding-top: 20px;
     }
+
     .second-container .create-menu .headers{
         font-family: sans-serif;
     }
+
     .second-container .create-menu h2{
         font-size: 15px;
         color: #4CAF50;
 
     }
+
     .second-container .create-menu .form_inputs{
         text-align: center;
         margin: 10px;
         padding-bottom: 10px;
     }
+
     .second-container .create-menu .form_inputs label {
         font-weight: bold;
         display: block;
@@ -71,6 +82,7 @@
         text-align: left;
         padding-top: 20px;
     }
+
     .second-container .create-menu .form_inputs input{
         width: 80%;
         padding: 10px 20px;
@@ -80,6 +92,7 @@
         padding-top: 10px;
         background-color: #ffffff;
     }
+
     .second-container .create-menu .submit_btn{
         background-color: #4CAF50;
         color: white;
@@ -89,6 +102,7 @@
         width: 100%;
         height: 50%;
     }
+
     .back_img{
         width: 100%;
         height: 750px;
@@ -104,41 +118,48 @@
             grid-template-columns: 1fr; 
             gap: 20px;
         }
+
         .first-container {
             padding-left: 0; 
             padding-bottom: 20px; 
             text-align: center; 
         }
+
         .first-container h1 {
             font-size: 40px;
         }
+
         .first-container p {
             font-size: 14px; 
         }
+
         .first-container .main_menu,
         .first-container .seasonal_menu {
             width: 80%;
             margin: 10px auto; 
         }
+
         .second-container {
             padding-left: 0; 
             width: 90%; 
             max-width: none; 
             padding-bottom: 50px; 
         }
+
         .second-container .create-menu {
             width: 100%; 
             padding: 20px; 
         }
+
         .second-container .create-menu .form_inputs {
             text-align: center; 
         }
+
         .main-wrapper .back_img {
             height: 100vh; 
         }
     }
 </style>
-
 
 <div class="main-wrapper">
     <img src="{% static 'images/header.png'%}" alt="" class="back_img">

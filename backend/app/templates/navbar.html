@@ -11,11 +11,14 @@
         background-position: center;
         color: white;
         position: relative;
+        background-color: black;
+        margin: 0px;
     }
 
     nav .left img {
         height: 40px; 
     }
+    
     .burger-menu {
         display: none;
         font-size: 24px;
@@ -37,6 +40,7 @@
         margin: 6px 0;
         transition: 0.3s;
     }
+
     .nav-links {
         display: flex;
     }
@@ -80,12 +84,13 @@
         padding: 10px 20px;
         border-radius: 5px;
     }
+
     #sign-in-link:hover {
         background-color: #4CAF50;
         color: white;
         transform: scale(0.9);
     }
-
+    
     @media (max-width: 400px) {
         .burger-menu {
             display: block;
@@ -135,12 +140,10 @@
             </svg>
          </a>
         {% endif %}
-       
     </div>
 </nav>
 
 {% block js%}
-
 <script> 
     document.querySelector('.burger-menu').addEventListener('click', function() {
         const navLinks = document.querySelector('.nav-links');

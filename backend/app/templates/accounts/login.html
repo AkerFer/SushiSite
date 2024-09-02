@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+
+<style>
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        background-color: green;
+        color: white;
+        font-size: 30px;
+        text-align: center;
+    }
+    form {
+        margin-top: 30px;
+    }
+    form input[type="text"], form input[type="password"] {
+        width: 300px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    form input[type="submit"] {
+        width: 150px;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    form small {
+        color: red;
+    }
+    form.form-group small {
+        color: red;
+    }
+    form.form-group {
+        margin-bottom: 20px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title" style="text-align: center;">Login</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form method="POST" action="{% url 'account_login' %}" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="text-muted">
+                <small>
+                    Don't have an account? 
+                    <a href="{% url 'account_signup' %}">Sign up</a>
+                </small>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
