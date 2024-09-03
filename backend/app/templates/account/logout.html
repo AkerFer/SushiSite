@@ -1,0 +1,81 @@
+{% load socialaccount %}
+{% load account%}
+{% load static %}
+
+{% block css %}
+<style>
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f8f9fa;
+    }
+    
+    .logout-panel {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        max-width: 400px;
+        width: 100%;
+    }
+    
+    .panel-heading {
+        margin-bottom: 20px;
+    }
+    
+    .panel-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+    }
+    
+    .panel-body p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 20px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    .btn-danger {
+        background-color: #dc3545;
+        color: white;
+    }
+    
+    .btn-danger:hover {
+        background-color: #c82333;
+    }
+    
+</style>
+{% endblock css %}
+
+{% block title %}
+<title>Log Out</title>
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="logout-panel">
+        <div class="panel-heading">
+            <h3 class="panel-title">Sign Out</h3>
+        </div>
+        <div class="panel-body">
+            <p>Are you sure you want to sign out?</p>
+            <form method="POST" action="{% url 'account_logout' %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Sign Out</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
