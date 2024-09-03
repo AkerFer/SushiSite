@@ -21,3 +21,16 @@ def delete_sushi_card(request, card_id):
         return redirect('create_sushi_card')
     return render(request, 'confirm_delete.html', {'card': card})
 
+def update_sushi_card(request, card_id):
+    sushi_card = get_object_or_404(SushiCard, id=card_id)
+    
+    if request.method == 'POST':
+        form = SushiCardForm(request.POST, request.FILES, instance=sushi_card)
+        if form.is_valid():
+            form.save()
+            return redirect('create_sushi_card')
+    else:
+        form = SushiCardForm(instance=sushi_card)
+    
+    return render(request, 'update_sushi_card.html', {'form': form, 'sushi_card': sushi_card})
+

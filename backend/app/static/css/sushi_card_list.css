@@ -38,6 +38,18 @@ body {
     font-size: 16px;
 }
 
+#sushi-form textarea {
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #90EE90;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
 #sushi-form input[type="file"] {
     padding: 8px;
     background-color: #f8f8f8;
@@ -60,35 +72,6 @@ body {
 
 #sushi-form input[type="file"]::file-selector-button:hover {
     background-color: #228B22;
-}
-
-.btn-green {
-    background-color: #32CD32;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-    font-family: 'Poppins', sans-serif;
-}
-
-.btn-green:hover {
-    background-color: #228B22;
-}
-
-.btn-red {
-    background-color: #FF6347;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.btn-red:hover {
-    background-color: #FF4500;
 }
 
 #card-list {
@@ -118,3 +101,48 @@ body {
 .description {
     color: #006400;
 }
+
+.btn-green, .btn-red, .btn-blue {
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.btn-green {
+    background-color: #32CD32;
+    color: white;
+}
+
+.btn-green:hover {
+    background-color: #228B22;
+}
+
+.btn-red {
+    background-color: #FF6347;
+    color: white;
+    margin-right: 10px;
+}
+
+.btn-red:hover {
+    background-color: #FF4500;
+}
+
+.btn-blue {
+    background-color: #1E90FF;
+    color: white;
+}
+
+.btn-blue:hover {
+    background-color: #1C86EE;
+}
+
+.card-content form {
+    display: inline-block;
+    margin-right: 10px;
+}
+

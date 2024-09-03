@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+}
+
+h1 {
+    color: #006400;
+    text-align: center;
+    margin: 30px 0px;
+}
+.main_card_list {
+    margin-bottom: 40px;
+}
+#sushi-form {
+    background-color: #F0FFF0;
+    border: 2px solid #90EE90;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+#sushi-form input[type="text"],
+#sushi-form select,
+#sushi-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #90EE90;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#sushi-form input[type="file"] {
+    padding: 8px;
+    background-color: #f8f8f8;
+    border: 1px solid #90EE90;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#sushi-form input[type="file"]::file-selector-button {
+    background-color: #32CD32;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+#sushi-form input[type="file"]::file-selector-button:hover {
+    background-color: #228B22;
+}
+
+#sushi-form textarea {
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #90EE90;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.btn-blue {
+    background-color: #32CD32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-blue:hover {
+    background-color: #228B22;
+}

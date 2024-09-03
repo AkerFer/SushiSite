@@ -31,6 +31,10 @@
                             {% csrf_token %}
                             <button type="submit" class="btn-red">Delete Card</button>
                         </form>
+                        <form method="post" action="{% url 'update_sushi_card' card.id %}">
+                            {% csrf_token %}
+                            <button type="submit" class="btn-blue">Update Card</button>
+                        </form>
                     </div>
                 </div>
             {% endfor %}

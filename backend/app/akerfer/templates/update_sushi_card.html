@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/update_sushi_card.css' %}">
+    <title>Update Sushi Cards</title>
+</head>
+<body>
+    {% include "navbar.html" %}
+<div class="main_card_list">
+    <h1>Update Sushi Card</h1>
+    <form method="post" enctype="multipart/form-data" id="sushi-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn-blue">Update Card</button>
+    </form>
+</div>
+    {% include "footer.html" %}
+</body>
+</html>
