@@ -18,10 +18,10 @@
     
     .container {
         width: 80%;
-        height: 100vh;
-        margin: 30px 0;
+        height: 80vh;
+        margin: 30px 0; 
         display: flex;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         border-radius: 8px;
         overflow: hidden;
     }
@@ -124,6 +124,66 @@
     .text-muted a:hover {
         text-decoration: underline;
     }
+
+    @media (max-width: 400px) {
+        .container {
+            flex-direction: column;
+            width: calc(100% - 20px);
+            height: auto;
+            margin: 0 auto;
+            padding: 0 30px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            background-color: lightgreen;
+            color: black;
+        }
+    
+        .split {
+            width: 100%;
+            height: auto;
+            padding: 0; /* Удаление внутренних отступов */
+        }
+    
+        .left {
+            padding: 20px; /* Отступы внутри контейнера для формы */
+        }
+    
+        .right {
+            display: none; /* Скрыть правую часть с изображением */
+        }
+    
+        .login-panel {
+            padding: 20px;
+            max-width: 100%;
+        }
+    
+        .panel-heading {
+            margin-bottom: 20px;
+        }
+    
+        .panel-title {
+            font-size: 24px;
+        }
+    
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            font-size: 14px;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            max-width: 100%; /* Обеспечить, что инпуты занимают всю доступную ширину */
+        }
+    
+        .btn-primary {
+            font-size: 16px;
+            padding: 10px;
+        }
+    
+        .text-muted {
+            font-size: 14px;
+        }
+    }
     
 </style>
 {% endblock css %}
@@ -158,4 +218,6 @@
         <img src="{% static 'pizza_images/satoru_pizza.png' %}" alt="Sushi Restaurant">
     </div>
 </div>
+
+
 {% endblock content %}
