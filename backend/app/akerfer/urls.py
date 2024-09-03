@@ -1,6 +1,9 @@
 from django.urls import path
-from .views import create_sushi_card
+from . import views
 
 urlpatterns = [
-    path('create/', create_sushi_card, name='sushi_card_list'),
-]
+    path('create-sushi/', views.create_sushi_card, name='create_sushi_card'),
+    path('delete-sushi/<int:card_id>/', views.delete_sushi_card, name='delete_sushi_card'),
+    # другие URL
+] 
+

@@ -2,79 +2,40 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/sushi_card_list.css' %}">
     <title>Sushi Cards</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    <script src="{% static 'scripts.js' %}" defer></script>
 </head>
-<style>
-
-    body {
-        font-family: Arial, sans-serif;
-    }
-    
-    h1 {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    
-    form {
-        max-width: 300px;
-        margin: 0 auto;
-        padding: 20px;
-    }
-    
-    button[type="submit"] {
-        padding: 10px 20px;
-    }
-</style>
 <body>
     {% include "navbar.html" %}
-    <h1>Create Sushi Card</h1>
-    <form method="post" enctype="multipart/form-data" id="sushi-form">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Create Card</button>
-    </form>
-
-    <h2>All Cards</h2>
-    <div id="card-list">
-        {% for card in cards %}
-            <div class="card">
-                <img src="{{ card.image.url }}" alt="{{ card.title }}">
-                <h3>{{ card.title }}</h3>
-                <p>{{ card.description }}</p>
-                <p>Price: ${{ card.price }}</p>
-                <p>Type: {{ card.get_sushi_type_display }}</p>
-            </div>
-        {% endfor %}
+    <div class="main_card_list">
+        <h1>Create Sushi Card</h1>
+        <form method="post" enctype="multipart/form-data" id="sushi-form">
+            {% csrf_token %}
+            {{ form.as_p }} 
+            <button type="submit" class="btn-green">Create Card</button>
+        </form>
+        
+        <h2>All Cards</h2>
+        <div id="card-list">
+            {% for card in cards %}
+                <div class="card">
+                    <img src="{{ card.image.url }}" alt="{{ card.title }}" class="card-img">
+                    <div class="card-content">
+                        <h3>{{ card.title }}</h3>
+                        <p class="description">{{ card.description|truncatewords:15 }}</p>
+                        <p><strong>Price:</strong> ${{ card.price }}</p>
+                        <p><strong>Type:</strong> {{ card.get_sushi_type_display }}</p>
+                        <form method="post" action="{% url 'delete_sushi_card' card.id %}">
+                            {% csrf_token %}
+                            <button type="submit" class="btn-red">Delete Card</button>
+                        </form>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
     {% include "footer.html" %}
 </body>
 </html>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('sushi-form');
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const formData = new FormData(form);
-        fetch(form.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'X-Requested-With': 'XMLHttpRequest',
-                'X-CSRFToken': form.querySelector('input[name="csrfmiddlewaretoken"]').value
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                // Optionally, handle successful form submission
-            }
-        })
-        .catch(error => console.error('Error:', error));
-    });
-});
-
-</script>
